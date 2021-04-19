@@ -1,0 +1,42 @@
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name":"John Doe",
+  "email": "john@ipsum.lorem",
+  "password": "pass",
+  "confirm": "pass"
+}
+
+###
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "alice@ipsum.lorem",
+  "password": "pass"
+}
+
+###
+GET http://localhost:3000/api/v1/user/all
+
+###
+GET http://localhost:3000/api/v1/user
+Authorization: Bearer ...token...
+
+###
+GET https://localhost:3001/api/v1/user
+Authorization: Bearer ...token...
+
+###
+OPTIONS http://localhost:3000/
+
+###
+OPTIONS https://localhost:3001/
+
+###
+GET http://localhost:3000/api/v1/houses
+
+###
+GET http://localhost:3000/api/v1/houses/3
+Authorization: Bearer ...token...
